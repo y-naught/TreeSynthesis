@@ -19,8 +19,8 @@ class Leaf {
     y = random(3 * height / 7);
     float angle = random(TWO_PI);
     
-    x =  50 *log(y) * sin(angle) + random(-100, 100);
-    z = 50 * log(y) * cos(angle) + random(-90, 80);
+    x = 50 * log(y) * sin(angle) + random(1);
+    z = 50 * log(y) * cos(angle) + random(1);
     
     pos = new PVector(x, y, z);
      

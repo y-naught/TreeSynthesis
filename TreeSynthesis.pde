@@ -10,11 +10,11 @@ Tree tree;
 PeasyCam cam;
 
 float min_dist = 2;
-float max_dist = 80;
+float max_dist = 50;
 
 void setup() {
-  fullScreen(P3D);
-  cam = new PeasyCam(this, 700);
+  size(1920, 1080, P3D);
+  cam = new PeasyCam(this, 650);
   tree = new Tree();
 }
 
@@ -24,7 +24,7 @@ void draw() {
   tree.show();
   tree.grow();
   
-  //saveFrame("3DTree-#####");
+  saveFrame("3DTree-#####");
 }
 
 float log10(float x){

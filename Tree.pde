@@ -14,7 +14,7 @@ class Tree {
     for (int i = 0; i < 2000; i++) {
       leaves.add(new Leaf());
     }    
-    Branch root = new Branch(new PVector(0,height/2), new PVector(0, -1));
+    Branch root = new Branch(new PVector(random(-width / 2, width / 2),random(height / 2)), new PVector(0, -1));
     branches.add(root);
     Branch current = new Branch(root);
 
