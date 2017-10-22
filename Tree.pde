@@ -1,7 +1,3 @@
-// Coding Rainbow
-// Daniel Shiffman
-// http://patreon.com/codingtrain
-// Code for: https://youtu.be/JcopTKXt8L8
 
 boolean pointsOn = false;
 
@@ -14,7 +10,7 @@ class Tree {
     for (int i = 0; i < 2000; i++) {
       leaves.add(new Leaf());
     }    
-    Branch root = new Branch(new PVector(random(-width / 2, width / 2),random(height / 2)), new PVector(0, -1));
+    Branch root = new Branch(new PVector(random(-width / 6, width / 6),random(height / 2)), new PVector(0, -1));
     branches.add(root);
     Branch current = new Branch(root);
 

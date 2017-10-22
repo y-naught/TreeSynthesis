@@ -1,7 +1,4 @@
-// Coding Rainbow
-// Daniel Shiffman
-// http://patreon.com/codingtrain
-// Code for: https://youtu.be/JcopTKXt8L8
+
 import java.util.*;
 import peasy.*;
 
