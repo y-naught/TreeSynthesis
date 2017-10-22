@@ -19,8 +19,21 @@ class Leaf {
     
     y = random(3 * height / 7);
     
-    x = random(-map(y, 0, 3 * height / 7, 10, 150), map(y, 0, 3 * height / 7, 10, 150));
-    z = random(-map(y, 0, 3 * height / 7, 10, 150), map(y, 0, 3 * height / 7, 10, 150));
+    float exp = 3.5;
+    
+    x = random(-map(pow(y,exp), 0, pow(3 * height / 7, exp), 10, 150), map(pow(y,exp), 0, pow(3 * height / 7, exp), 10, 150));
+    z = random(-map(pow(y,exp), 0, pow(3 * height / 7, exp), 10, 150), map(pow(y,exp), 0, pow(3 * height / 7, exp), 10, 150));
+    
+    //float a = 5;
+    //float b = 5;
+    //float c = 5;
+    
+    //x = random(-50, 150);
+    //y = random(-100, 100);
+    
+    //z = pow(abs((pow(c,2) * (1 - (pow(x, 2) / pow(a, 2)) - (pow(y, 2) / pow(b, 2))))), 0.5);
+    ////println(z);
+    
     pos = new PVector(x, y, z);
      
     //pos = PVector.random3D();

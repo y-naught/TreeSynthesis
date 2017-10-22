@@ -7,10 +7,10 @@ class Tree {
   ArrayList<Point> points = new ArrayList<Point>();
 
   Tree() {
-    for (int i = 0; i < 1000; i++) {
+    for (int i = 0; i < 3000; i++) {
       leaves.add(new Leaf());
     }    
-    Branch root = new Branch(new PVector(0, height / 2 + 100), new PVector(0, -1));
+    Branch root = new Branch(new PVector(0, 0), new PVector(0, -1));
     branches.add(root);
     Branch current = new Branch(root);
 
@@ -73,6 +73,7 @@ class Tree {
         rand.setMag(0.3);
         b.dir.add(rand);
         b.dir.normalize();
+        b.dir.mult(1);
         Branch newB = new Branch(b);
         branches.add(newB);
         b.reset();
@@ -90,23 +91,24 @@ class Tree {
     for (int i = 0; i < branches.size(); i++) {
       Branch b = branches.get(i);
       if (b.parent != null) {
-        float sw = map(i, 0, branches.size(), 6, 0);
+        float sw = map(i, 0, branches.size(), 2, 0);
         if (sw < 1) {
           noStroke();
-          fill(80, 125, 20);
+          fill(100, 155, 40);
           pushMatrix();
           translate(b.pos.x, b.pos.y, b.pos.z);
-          sphere(2);
+          //sphere(2);
+          ellipse(0, 0, 5, 5);
           popMatrix();
         }
         strokeWeight(sw);
-        //stroke(40, 40, 20);
-        fill(40,40,20
-        pushMatrix();
-        translate(b.pos.x, b.pos.y, b.pos.z);
-        sphere(sw);
-        popMatrix();
-        //line(b.pos.x, b.pos.y, b.pos.z, b.parent.pos.x, b.parent.pos.y, b.parent.pos.z);
+        stroke(40, 40, 20);
+        //fill(60,60,30);
+        //pushMatrix();
+        //translate(b.pos.x, b.pos.y, b.pos.z);
+        ////sphere(sw);
+        //popMatrix();
+        line(b.pos.x, b.pos.y, b.pos.z, b.parent.pos.x, b.parent.pos.y, b.parent.pos.z);
       }
     }
   }
