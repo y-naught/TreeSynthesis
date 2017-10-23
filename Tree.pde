@@ -90,8 +90,8 @@ class Tree {
     for (int i = 0; i < branches.size(); i++) {
       Branch b = branches.get(i);
       if (b.parent != null) {
-        float sw = map(i, 0, branches.size(), 6, 0);
-        if (sw < 1) {
+        float sw = map(i, 0, branches.size(), 4, 0);
+        if (sw < 2) {
           noStroke();
           fill(80, 125, 20);
           pushMatrix();
@@ -101,7 +101,7 @@ class Tree {
         }
         strokeWeight(sw);
         //stroke(40, 40, 20);
-        fill(40,40,20
+        fill(60,60,30);
         pushMatrix();
         translate(b.pos.x, b.pos.y, b.pos.z);
         sphere(sw);

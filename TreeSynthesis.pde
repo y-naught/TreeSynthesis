@@ -18,12 +18,13 @@ void setup() {
 
 void draw() {
   directionalLight(255, 255, 255, -1, 1, 0);
+  directionalLight(255, 255, 255, -1, 1, 0);
   translate(0, - height / 4);
   background(0);
   tree.show();
   tree.grow();
   
-  //saveFrame("3DTree-#####");
+  saveFrame("3DTree2-#####");
 }
 
 float log10(float x){
