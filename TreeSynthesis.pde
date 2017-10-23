@@ -17,15 +17,25 @@ void setup() {
 }
 
 void draw() {
+<<<<<<< HEAD
   //directionalLight(255, 255, 255, -1, 1, 0);
   //directionalLight(255, 255, 255, -1, 0, 0);
   rotate(PI);
   translate(0,  -height / 6);
+=======
+  directionalLight(255, 255, 255, -1, 1, 0);
+  directionalLight(255, 255, 255, -1, 1, 0);
+  translate(0, - height / 4);
+>>>>>>> cdb795ebb9b2b07ff241c9b3cabb1604c78bd02e
   background(0);
   tree.show();
   tree.grow();
   
+<<<<<<< HEAD
   saveFrame("Bush80-#####");
+=======
+  saveFrame("3DTree2-#####");
+>>>>>>> cdb795ebb9b2b07ff241c9b3cabb1604c78bd02e
 }
 
 float log10(float x){

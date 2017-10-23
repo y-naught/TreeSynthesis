@@ -91,8 +91,13 @@ class Tree {
     for (int i = 0; i < branches.size(); i++) {
       Branch b = branches.get(i);
       if (b.parent != null) {
+<<<<<<< HEAD
         float sw = map(i, 0, branches.size(), 2, 0);
         if (sw < 1) {
+=======
+        float sw = map(i, 0, branches.size(), 4, 0);
+        if (sw < 2) {
+>>>>>>> cdb795ebb9b2b07ff241c9b3cabb1604c78bd02e
           noStroke();
           fill(100, 155, 40);
           pushMatrix();
@@ -102,6 +107,7 @@ class Tree {
           popMatrix();
         }
         strokeWeight(sw);
+<<<<<<< HEAD
         stroke(40, 40, 20);
         //fill(60,60,30);
         //pushMatrix();
@@ -109,6 +115,15 @@ class Tree {
         ////sphere(sw);
         //popMatrix();
         line(b.pos.x, b.pos.y, b.pos.z, b.parent.pos.x, b.parent.pos.y, b.parent.pos.z);
+=======
+        //stroke(40, 40, 20);
+        fill(60,60,30);
+        pushMatrix();
+        translate(b.pos.x, b.pos.y, b.pos.z);
+        sphere(sw);
+        popMatrix();
+        //line(b.pos.x, b.pos.y, b.pos.z, b.parent.pos.x, b.parent.pos.y, b.parent.pos.z);
+>>>>>>> cdb795ebb9b2b07ff241c9b3cabb1604c78bd02e
       }
     }
   }
